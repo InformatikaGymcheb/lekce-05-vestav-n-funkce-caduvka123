@@ -12,6 +12,8 @@ ceny_kosiku = [1250.50, 499.00, 120.80, 5600.00, 890.00]
 
 print(f"Počet položek: {len(ceny_kosiku)}")
 # Sem doplň zbytek:
+print(f"Nejlevnější produkt stojí: {min(ceny_kosiku)} Kč")
+print(f"Nejdražší produkt stojí:{max(ceny_kosiku)} Kč")
 
 
 # ÚLOHA 2: Celková tržba
@@ -19,6 +21,9 @@ print(f"Počet položek: {len(ceny_kosiku)}")
 # Výsledek vypiš a zaokrouhli na celé koruny.
 
 # Sem doplň kód:
+celkem = sum(ceny_kosiku)
+zaokrouhleno = round(celkem)
+print(f"Celková cena košíku je: {zaokrouhleno} Kč")
 
 
 # ÚLOHA 3: Průměrná cena
@@ -27,6 +32,8 @@ print(f"Počet položek: {len(ceny_kosiku)}")
 # Výsledek vypiš zaokrouhlený na 2 desetinná místa pomocí f-stringu (:.2f)
 
 # Sem doplň kód:
+prumer = sum(ceny_kosiku) / len(ceny_kosiku)
+print(f"Průměrná cena produktu v košíku je:{prumer:.2f} Kč")
 
 
 # BONUSOVÁ ÚLOHA: Rozdíl
@@ -34,3 +41,5 @@ print(f"Počet položek: {len(ceny_kosiku)}")
 # Výsledek vypiš.
 
 # Sem doplň kód:
+rozdil = max(ceny_kosiku) - min(ceny_kosiku)
+print(f"Nejdražší položka je o {rozdil} Kč drazší než ta nejlevnější.")
